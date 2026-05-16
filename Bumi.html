@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Environs</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+:root{
+    --green:#28a745;
+    --dark:#0f2d24;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:#f5f5f5;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+    color:var(--green)!important;
+}
+
+.nav-link{
+    color:#333!important;
+    font-weight:600;
+    margin:0 10px;
+}
+
+.nav-link:hover{
+    color:var(--green)!important;
+}
+
+.donate-btn{
+    background:var(--green);
+    color:white;
+    border-radius:40px;
+    padding:10px 25px;
+    font-weight:bold;
+}
+
+.donate-btn:hover{
+    background:#1d7a33;
+    color:white;
+}
+
+/* HERO */
+
+.carousel-item img{
+    height:100vh;
+    object-fit:cover;
+    filter:brightness(60%);
+}
+
+.carousel-caption{
+    bottom:25%;
+    text-align:left;
+}
+
+.carousel-caption h1{
+    font-size:70px;
+    font-weight:bold;
+}
+
+.carousel-caption p{
+    font-size:22px;
+    max-width:700px;
+}
+
+.main-btn{
+    background:var(--green);
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    display:inline-block;
+    font-weight:bold;
+}
+
+.main-btn:hover{
+    background:#1d7a33;
+    color:white;
+}
+
+/* ABOUT */
+
+.about-box{
+    background:#eef7ef;
+    padding:30px;
+    border-radius:15px;
+}
+
+.about-img{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.about-img img{
+    width:100%;
+}
+
+/* CARD */
+
+.feature-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 30px rgba(0,0,0,0.1);
+}
+
+.feature-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+/* DONATION */
+
+.donation-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    color:white;
+}
+
+.donation-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    filter:brightness(45%);
+}
+
+.donation-content{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+}
+
+/* ACHIEVEMENT */
+
+.achievement{
+    background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1920') center/cover;
+    position:relative;
+    color:white;
+}
+
+.achievement::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.achievement .container{
+    position:relative;
+    z-index:2;
+}
+
+.stat-box{
+    border:1px solid rgba(255,255,255,0.4);
+    padding:40px;
+    text-align:center;
+}
+
+/* BLOG */
+
+.blog-card{
+    background:#0f7b39;
+    color:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.blog-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* TEAM */
+
+.team-img{
+    position:relative;
+    overflow:hidden;
+}
+
+.team-img img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+
+.footer{
+    background:black;
+    color:white;
+}
+
+.footer input{
+    padding:12px;
+    border:none;
+    width:100%;
+}
+
+.footer button{
+    background:var(--green);
+    border:none;
+    color:white;
+    padding:12px 20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.carousel-caption h1{
+    font-size:40px;
+}
+
+.carousel-caption p{
+    font-size:16px;
+}
+
+.carousel-caption{
+    bottom:20%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="bi bi-leaf-fill"></i> Environs
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-center" id="menu">
+
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Services</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Blog</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+<a href="#" class="btn donate-btn d-none d-lg-block">
+Donate Now
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO SLIDER -->
+
+<div id="hero" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<!-- SLIDE 1 -->
+
+<div class="carousel-item active">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920">
+
+<div class="carousel-caption">
+
+<h1>SELAMATKAN BUMI</h1>
+
+<p>
+Mari bersama menjaga lingkungan dan menciptakan masa depan hijau.
+</p>
+
+<a href="#" class="main-btn">
+Gabung Sekarang
+</a>
+
+</div>
+
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="carousel-item">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1920">
+
+<div class="carousel-caption">
+
+<h1>AKSI NYATA</h1>
+
+<p>
+Setiap langkah kecil dapat membawa perubahan besar.
+</p>
+
+<a href="#" class="main-btn">
+Mulai Sekarang
+</a>
+
+</div>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="carousel-item">
+
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1920">
+
+<div class="carousel-caption">
+
+<h1>LINGKUNGAN HIJAU</h1>
+
+<p>
+Bersama menjaga bumi untuk generasi mendatang.
+</p>
+
+<a href="#" class="main-btn">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#hero" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" data-bs-target="#hero" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6">
+
+<div class="about-img">
+
+<img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200">
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<h6 class="text-success fw-bold">
+ABOUT US
+</h6>
+
+<h1 class="fw-bold mb-4">
+Tujuan Kami Adalah Menjaga Kelestarian Alam
+</h1>
+
+<p class="text-muted">
+Kami adalah organisasi yang berdedikasi untuk memberikan pendidikan dan meningkatkan kesadaran masyarakat tentang pentingnya keberlanjutan.
+</p>
+
+<div class="about-box mt-4">
+
+<div class="d-flex gap-3 mb-3">
+
+<button class="btn btn-success">About</button>
+<button class="btn btn-light">Mission</button>
+<button class="btn btn-light">Vision</button>
+
+</div>
+
+<h5>TENTANG KAMI</h5>
+
+<p>
+Menjaga lingkungan dan pelestarian hutan secara berkelanjutan.
+</p>
+
+<a href="#" class="btn btn-success rounded-pill px-4">
+Read More
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHAT WE DO -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h6 class="text-success fw-bold">
+WHAT WE DO
+</h6>
+
+<h1 class="fw-bold">
+Kontribusi Nyata Kami Untuk Menjaga Lingkungan
+</h1>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card feature-card">
+
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200">
+
+<div class="card-body text-center">
+
+<h5>Pengelolaan Dana</h5>
+
+<p>
+Menggunakan dana secara transparan dan tepat sasaran.
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card feature-card">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200">
+
+<div class="card-body text-center">
+
+<h5>Kemitraan Strategis</h5>
+
+<p>
+Bekerja sama dengan komunitas dan pemerintah.
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card feature-card">
+
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200">
+
+<div class="card-body text-center">
+
+<h5>Ekowisata</h5>
+
+<p>
+Meningkatkan kesadaran melalui wisata edukasi.
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="card feature-card">
+
+<img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=1200">
+
+<div class="card-body text-center">
+
+<h5>Konservasi Satwa</h5>
+
+<p>
+Melindungi habitat satwa liar dan alam.
+</p>
+
+<a href="#">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DONATION -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h6 class="text-success fw-bold">
+DONATION
+</h6>
+
+<h1 class="fw-bold">
+Uang Anda Akan Menyelamatkan Hidup Kami
+</h1>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="donation-card">
+
+<img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1200">
+
+<div class="donation-content">
+
+<h5 class="text-success">ORGANIC</h5>
+
+<h2>Bantu Kami Lebih Banyak</h2>
+
+<p>
+Menjaga lingkungan adalah tanggung jawab kita bersama.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="donation-card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200">
+
+<div class="donation-content">
+
+<h5 class="text-success">RECYCLE</h5>
+
+<h2>Bantu Kami Lebih Banyak</h2>
+
+<p>
+Mari selamatkan bumi demi masa depan.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="donation-card">
+
+<img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1200">
+
+<div class="donation-content">
+
+<h5 class="text-success">RECYCLING</h5>
+
+<h2>Bantu Kami Lebih Banyak</h2>
+
+<p>
+Bersama menciptakan lingkungan yang sehat.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<a href="#" class="btn btn-success px-5">
+All Donation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENT -->
+
+<section class="achievement py-5">
+
+<div class="container text-center">
+
+<h6 class="text-success fw-bold">
+ACHIEVEMENT
+</h6>
+
+<h1 class="fw-bold mb-5">
+Kami Peduli Lingkungan
+</h1>
+
+<div class="row g-4">
+
+<div class="col-lg-3 col-6">
+
+<div class="stat-box">
+
+<i class="bi bi-tree-fill fs-1"></i>
+
+<h3 class="mt-3">380+</h3>
+
+<p>Beavers Saved</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stat-box">
+
+<i class="bi bi-cash-stack fs-1"></i>
+
+<h3 class="mt-3">$539</h3>
+
+<p>Funds</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stat-box">
+
+<i class="bi bi-people-fill fs-1"></i>
+
+<h3 class="mt-3">718+</h3>
+
+<p>Volunteer</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="stat-box">
+
+<i class="bi bi-heart-fill fs-1"></i>
+
+<h3 class="mt-3">487+</h3>
+
+<p>Days Help</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mt-5">
+
+<a href="#" class="main-btn">
+Join With Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOG -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h6 class="text-success fw-bold">
+LATEST NEWS & BLOG
+</h6>
+
+<h1 class="fw-bold">
+Help Today Because Tomorrow You May Need Help
+</h1>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200">
+
+<div class="p-4">
+
+<h4>Membuat Rencana Kebersihan</h4>
+
+<p>
+Program kebersihan untuk lingkungan yang sehat.
+</p>
+
+<button class="btn btn-dark">
+Read More
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1498928715928-dc4a3c0f4c8c?q=80&w=1200">
+
+<div class="p-4">
+
+<h4>Udara Bersih Untuk Masa Depan</h4>
+
+<p>
+Menjaga kualitas udara tetap sehat dan bersih.
+</p>
+
+<button class="btn btn-dark">
+Read More
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200">
+
+<div class="p-4">
+
+<h4>Harmoni Alam di Tengah Kota</h4>
+
+<p>
+Ruang hijau membantu lingkungan tetap sejuk.
+</p>
+
+<button class="btn btn-dark">
+Read More
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer py-5">
+
+<div class="container">
+
+<div class="row g-5">
+
+<div class="col-lg-3">
+
+<h4>Newsletter</h4>
+
+<p>
+Subscribe untuk update terbaru.
+</p>
+
+<div class="d-flex">
+
+<input type="text" placeholder="Enter your mail">
+
+<button>Sign Up</button>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<h4>Our Services</h4>
+
+<p>Save Turtle</p>
+<p>White Tiger</p>
+<p>Social Charity</p>
+<p>Energy Of Life</p>
+
+</div>
+
+<div class="col-lg-3">
+
+<h4>Volunteer</h4>
+
+<p>Karen Devson</p>
+<p>Jack Simmons</p>
+<p>Michael Jones</p>
+
+</div>
+
+<div class="col-lg-3">
+
+<h4>Our Gallery</h4>
+
+<div class="row g-2">
+
+<div class="col-4">
+<img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=400" class="img-fluid">
+</div>
+
+<div class="col-4">
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=400" class="img-fluid">
+</div>
+
+<div class="col-4">
+<img src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=400" class="img-fluid">
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="border-light">
+
+<div class="text-center">
+© 2025 Environs. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

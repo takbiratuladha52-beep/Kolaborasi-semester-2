@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Siswa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Kustomisasi Hero Section */
+        .bg-dark-custom {
+            background-color: #2c3e50;
+            color: white;
+            background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            padding: 6rem 0;
+        }
+        /* Gaya untuk Card Visi Misi */
+        .card-visimisi {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====================== HERO SECTION ====================== -->
+<section class="bg-dark-custom text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Sistem Manajemen Siswa</h1>
+        <p class="lead mt-3 mb-4">Kelola data kehadiran, profil, dan status akademik siswa dengan lebih mudah dan efisien.</p>
+        <a href="#tabel-siswa" class="btn btn-primary btn-lg me-2">Lihat Tabel</a>
+        <a href="#panduan" class="btn btn-outline-light btn-lg">Panduan</a>
+    </div>
+</section>
+
+<!-- ====================== BREADCRUMB ====================== -->
+<nav aria-label="breadcrumb" class="mt-4 container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="#visi-misi">Visi Misi</a></li>
+        <li class="breadcrumb-item"><a href="#jurusan">Jurusan</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data Siswa 2026</li>
+    </ol>
+</nav>
+
+<!-- ====================== VISI & MISI CARDS ====================== -->
+<section id="visi-misi" class="mt-5 container">
+    <h2 class="text-center mb-4">Visi & Misi Lembaga</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card card-visimisi h-100">
+                <div class="card-header bg-primary text-white">VISI SEKOLAH</div>
+                <div class="card-body">
+                    <p class="card-text">"Menciptakan Insan Bertaqwa yang Solutif, Optimis, Lugas, Terampil dan Inovatif, Guna Menjunjung Martabat Bangsa."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-visimisi h-100">
+                <div class="card-header bg-dark text-white">MISI SEKOLAH</div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li>• Menumbuhkan keimanan dan ketakwaan serta nilai-nilai mengembangkan diri</li>
+                        <li>• Mengembangkan kapasitas akademik dengan mengedepankan sikap mandiri</li>
+                        <li>• Membangun sikap kompetitif dalam menghadapi perkembangan zaman</li>
+                        <li>• Menyiapkan peserta didik untuk memasuki jenjang pendidikan lebih tinggi</li>
+                        <li>• Menumbuhkan kesadaran akan pentingnya kesehatan</li>
+                        <li>• Mendidik peserta didik untuk menjadi individu yang berakhlak mulia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== JURUSAN CARD GROUP & RESPONSIVE GRID ====================== -->
+<section id="jurusan" class="mt-5 container">
+    <h2 class="text-center mb-4">Ringkasan Angkatan per Jurusan</h2>
+    <div class="row">
+        <!-- Kolom Jurusan (col-md-8) -->
+        <div class="col-md-8">
+            <div class="card-group gap-3">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Prodi RPL">
+                    <div class="card-body">
+                        <h5 class="card-title">RPL</h5>
+                        <p class="card-text small">Program keahlian Rekayasa Perangkat Lunak. Siswa belajar membuat aplikasi berbasis web dan mobile.</p>
+                        <p class="card-text"><small class="text-muted">Siswa: 120 | Kelas: 4</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Prodi TKJ">
+                    <div class="card-body">
+                        <h5 class="card-title">TKJ</h5>
+                        <p class="card-text small">Program keahlian Teknik Komputer dan Jaringan. Siswa belajar konfigurasi jaringan dan perangkat komputer.</p>
+                        <p class="card-text"><small class="text-muted">Siswa: 115 | Kelas: 4</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Prodi MM">
+                    <div class="card-body">
+                        <h5 class="card-title">MM</h5>
+                        <p class="card-text small">Program keahlian Multimedia. Siswa belajar desain grafis, animasi, dan editing video.</p>
+                        <p class="card-text"><small class="text-muted">Siswa: 105 | Kelas: 3</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group gap-3 mt-3">
+                <div class="card">
+                    <img src="download (1).jfif" class="card-img-top" alt="Prodi Bisnis">
+                    <div class="card-body">
+                        <h5 class="card-title">BUSANA</h5>Jurusan Desain Fashion atau Fashion Design adalah pilihan paling linear buat lulusan Tata Busana. Di sini kamu bakal belajar lebih dalam tentang dunia mode, mulai dari perencanaan desain, produksi busana, sampai memahami tren fashion global.
+                        <p class="card-text small"></p>
+                        <p class="card-text"><small class="text-muted">Siswa: 90 | Kelas: 3</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Prodi Otomotif">
+                    <div class="card-body">
+                        <h5 class="card-title">OTOMOTIF</h5>
+                        <p class="card-text small">Program keahlian Teknik Kendaraan Ringan Otomotif. Siswa belajar perawatan dan perbaikan kendaraan.</p>
+                        <p class="card-text"><small class="text-muted">Siswa: 85 | Kelas: 3</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ====================== TABEL DATA SISWA ====================== -->
+<section id="tabel-siswa" class="mt-5 container mb-5">
+    <h2 class="text-center mb-4">Tabel Data Siswa</h2>
+    <p class="text-center text-muted small mb-3">Tabel ini menampilkan data siswa beserta status kehadiran pada pertemuan terakhir</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>No</th>
+                    <th>Foto</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="gambar1.jpg" width="40" height="40" class="rounded-circle" alt="Ani Siti"></td>
+                    <td>wulandari</td>
+                    <td>X RPL 3</td>
+                    <td><span class="badge bg-success">Aktif</span></td>
+                    <td><span class="badge bg-success">Hadir</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="gambar2.jpg" width="40" height="40" class="rounded-circle" alt="Budi Santoso"></td>
+                    <td>Putra Pratama</td>
+                    <td>X TKJ 2</td>
+                    <td><span class="badge bg-success">Aktif</span></td>
+                    <td><span class="badge bg-warning">Izin</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="gambar3.jpg" width="40" height="40" class="rounded-circle" alt="Citra Lestari"></td>
+                    <td>Mei Nurul Arzeti</td>
+                    <td>XI MM 1</td>
+                    <td><span class="badge bg-warning">Tidak Aktif</span></td>
+                    <td><span class="badge bg-danger">Tidak Hadir</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="gambar2.jpg" width="40" height="40" class="rounded-circle" alt="fajar Permana"></td>
+                    <td>Fajar Permana</td>
+                    <td>XII Bisnis 1</td>
+                    <td><span class="badge bg-success">Aktif</span></td>
+                    <td><span class="badge bg-success">Hadir</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Pagination -->
+    <nav aria-label="Pagination tabel siswa" class="d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+    <div class="d-flex justify-content-between mt-2">
+        <div>
+            <button class="btn btn-primary btn-sm">Unduh Data</button>
+        </div>
+        <div class="small text-muted">Menampilkan 1-4 dari 25 data</div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

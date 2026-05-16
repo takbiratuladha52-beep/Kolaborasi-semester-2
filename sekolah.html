@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Manajemen Siswa</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#0d6efd;
+    padding:15px 0;
+}
+
+.navbar-brand{
+    font-weight:bold;
+    font-size:22px;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#dbe9ff !important;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* SECTION */
+.section-title{
+    font-size:35px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:50px;
+}
+
+/* CARD */
+.card{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.shadow-custom{
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* WHY */
+.why-box{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    height:100%;
+}
+
+.why-box i{
+    font-size:45px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+/* VISI MISI */
+.visi-box{
+    background:#0d6efd;
+    color:white;
+    border-radius:20px;
+    padding:35px;
+    height:100%;
+}
+
+.misi-box{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    height:100%;
+}
+
+/* STATISTIK */
+.statistik{
+    background:linear-gradient(to right,#0d6efd,#3a8bff);
+    color:white;
+    padding:60px 0;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box i{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+.table img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* MENTOR */
+.mentor img{
+    height:250px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="bi bi-mortarboard-fill"></i>
+SMK Negeri Tengaran
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#jurusan">Jurusan</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#tabel">Data Siswa</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#mentor">Mentor</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#kontak">Kontak</a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="container">
+
+<h1>Sistem Manajemen Siswa</h1>
+
+<p>
+Kelola data siswa, jurusan, kehadiran, dan informasi sekolah dengan lebih modern dan efisien.
+</p>
+
+<a href="#tabel" class="btn btn-primary btn-lg me-2">
+Lihat Data
+</a>
+
+<a href="#jurusan" class="btn btn-outline-light btn-lg">
+Jurusan
+</a>
+
+</div>
+
+</section>
+
+<!-- WHY -->
+<section class="py-5">
+
+<div class="container">
+
+<h2 class="section-title">
+Mengapa SMK Negeri Tengaran
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="why-box shadow-custom">
+<i class="bi bi-award-fill"></i>
+<h4>Prestasi</h4>
+<p>
+Memiliki banyak prestasi tingkat daerah hingga nasional.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="why-box shadow-custom">
+<i class="bi bi-building"></i>
+<h4>Fasilitas</h4>
+<p>
+Laboratorium modern dan lingkungan belajar nyaman.
+</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="why-box shadow-custom">
+<i class="bi bi-people-fill"></i>
+<h4>Budaya Industri</h4>
+<p>
+Pembelajaran sesuai kebutuhan dunia kerja dan industri.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- VISI MISI -->
+<section class="py-5">
+
+<div class="container">
+
+<h2 class="section-title">
+Visi & Misi
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+
+<div class="visi-box shadow-custom">
+
+<h3 class="mb-4">
+VISI
+</h3>
+
+<p>
+Mewujudkan generasi yang beriman, kreatif, mandiri, dan berdaya saing tinggi dalam menghadapi perkembangan zaman.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="misi-box shadow-custom">
+
+<h3 class="mb-4">
+MISI
+</h3>
+
+<ul>
+
+<li>Meningkatkan kualitas pendidikan.</li>
+<li>Mengembangkan karakter siswa.</li>
+<li>Mendorong inovasi dan kreativitas.</li>
+<li>Membekali keterampilan industri.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- JURUSAN -->
+<section class="py-5" id="jurusan">
+
+<div class="container">
+
+<h2 class="section-title">
+Jurusan
+</h2>
+
+<div class="row g-4">
+
+<!-- PPLG -->
+<div class="col-md-4">
+
+<div class="card shadow-custom">
+
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-body text-center">
+
+<h4 class="text-primary">
+PPLG
+</h4>
+
+<p>
+Pengembangan Perangkat Lunak dan Gim.
+</p>
+
+<button class="btn btn-outline-primary">
+Baca Selengkapnya
+</button>
+
+</div>
+</div>
+</div>
+
+<!-- TJKT -->
+<div class="col-md-4">
+
+<div class="card shadow-custom">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-body text-center">
+
+<h4 class="text-primary">
+TJKT
+</h4>
+
+<p>
+Teknik Jaringan Komputer dan Telekomunikasi.
+</p>
+
+<button class="btn btn-outline-primary">
+Baca Selengkapnya
+</button>
+
+</div>
+</div>
+</div>
+
+<!-- TBSM -->
+<div class="col-md-4">
+
+<div class="card shadow-custom">
+
+<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-body text-center">
+
+<h4 class="text-primary">
+TBSM
+</h4>
+
+<p>
+Teknik dan Bisnis Sepeda Motor.
+</p>
+
+<button class="btn btn-outline-primary">
+Baca Selengkapnya
+</button>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- STATISTIK -->
+<section class="statistik">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="stat-box">
+<i class="bi bi-people-fill"></i>
+<h2>2329</h2>
+<p>Siswa Aktif</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-box">
+<i class="bi bi-award-fill"></i>
+<h2>93%</h2>
+<p>Keterserapan</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-box">
+<i class="bi bi-building"></i>
+<h2>130</h2>
+<p>Mitra Kerja</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-box">
+<i class="bi bi-star-fill"></i>
+<h2>A</h2>
+<p>Akreditasi</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TABEL -->
+<section class="py-5" id="tabel">
+
+<div class="container">
+
+<h2 class="section-title">
+Data Siswa
+</h2>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-hover text-center align-middle bg-white">
+
+<thead class="table-primary">
+
+<tr>
+<th>No</th>
+<th>Foto</th>
+<th>Nama</th>
+<th>Kelas</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+
+<td>
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+</td>
+
+<td>Arsyafina</td>
+<td>X PPLG</td>
+
+<td>
+<span class="badge bg-success">
+Aktif
+</span>
+</td>
+
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+</td>
+
+<td>Adha</td>
+<td>X TJKT</td>
+
+<td>
+<span class="badge bg-warning text-dark">
+Izin
+</span>
+</td>
+
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>
+<img src="https://randomuser.me/api/portraits/men/65.jpg">
+</td>
+
+<td>Yudha</td>
+<td>X TBSM</td>
+
+<td>
+<span class="badge bg-danger">
+Alfa
+</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- MENTOR -->
+<section class="py-5 bg-light" id="mentor">
+
+<div class="container">
+
+<h2 class="section-title">
+Mentor
+</h2>
+
+<div class="row g-4 mentor">
+
+<div class="col-md-3">
+
+<div class="card shadow-custom">
+
+<img src="https://randomuser.me/api/portraits/men/40.jpg">
+
+<div class="card-body text-center">
+
+<h5>Mentor 1</h5>
+<p>Web Developer</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow-custom">
+
+<img src="https://randomuser.me/api/portraits/men/41.jpg">
+
+<div class="card-body text-center">
+
+<h5>Mentor 2</h5>
+<p>Network Engineer</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow-custom">
+
+<img src="https://randomuser.me/api/portraits/women/42.jpg">
+
+<div class="card-body text-center">
+
+<h5>Mentor 3</h5>
+<p>Fashion Designer</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow-custom">
+
+<img src="https://randomuser.me/api/portraits/men/43.jpg">
+
+<div class="card-body text-center">
+
+<h5>Mentor 4</h5>
+<p>Chef</p>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section class="py-5" id="kontak">
+
+<div class="container">
+
+<h2 class="section-title">
+Hubungi Kami
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-5">
+
+<div class="card shadow-custom p-4 h-100">
+
+<h4 class="mb-4">
+Informasi
+</h4>
+
+<p>
+<i class="bi bi-geo-alt-fill text-primary"></i>
+Jl. Raya Tengaran, Semarang
+</p>
+
+<p>
+<i class="bi bi-telephone-fill text-primary"></i>
++62 838 2108 3501
+</p>
+
+<p>
+<i class="bi bi-envelope-fill text-primary"></i>
+info@smknTengaran.sch.id
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-7">
+
+<div class="card shadow-custom p-4">
+
+<form>
+
+<div class="mb-3">
+<label>Nama</label>
+<input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Pesan</label>
+<textarea class="form-control" rows="5"></textarea>
+</div>
+
+<button class="btn btn-primary">
+Kirim Pesan
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p class="mb-0">
+© 2026 SMK Negeri Tengaran | Sistem Manajemen Siswa
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
